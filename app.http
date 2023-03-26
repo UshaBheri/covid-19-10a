@@ -1,0 +1,49 @@
+###1
+POST http://localhost:3000/login/
+Content-Type:application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+###2
+GET http://localhost:3000/states/
+
+###3
+GET http://localhost:3000/states/:stateId/
+
+###4
+POST http://localhost:3000/districts/
+Content-Type:application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###5
+GET  http://localhost:3000/districts/:districtId/
+
+###6
+DELETE http://localhost:3000/districts/:districtId/
+
+###7
+PUT http://localhost:3000/districts/:districtId/
+Content-Type:application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###8
+GET http://localhost:3000/states/:stateId/stats/
